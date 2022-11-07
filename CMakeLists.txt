@@ -7,6 +7,10 @@ project(robotcorp)
 ## Find catkin macros and libraries
 ## if COMPONENTS list like find_package(catkin REQUIRED COMPONENTS xyz)
 ## is used, also find other catkin packages
+
+set(nlohmann_json_DIR "thirdparty/json-3.11.2/build")
+find_package(nlohmann_json 3.2.0 REQUIRED)
+
 find_package(catkin REQUIRED COMPONENTS
   mqtt_client
   nav_msgs
@@ -218,11 +222,11 @@ include_directories(
 # catkin_add_nosetests(test)
 
 add_library(commands robot/include/Command.h robot/src/Command.cpp)
-target_link_libraries(commands ${catkin_LIBRARIES})
+target_link_libraries(commands ${catkin_LIBRARIES} nlohmann_json::nlohmann_json)
 add_dependencies(commands ${catkin_EXPORTED_TARGETS})
 
 add_library(sender sender/include/Sender.h sender/src/Sender.cpp)
-target_link_libraries(sender ${catkin_LIBRARIES})
+target_link_libraries(sender ${catkin_LIBRARIES} nlohmann_json::nlohmann_json)
 add_dependencies(sender ${catkin_EXPORTED_TARGETS})
 
 add_library(receiver receiver/include/Receiver.h receiver/src/Receiver.cpp)

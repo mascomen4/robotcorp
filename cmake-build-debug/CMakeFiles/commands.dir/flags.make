@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = -DROSCONSOLE_BACKEND_LOG4CXX -DROS_BUILD_SHARED_LIBS=1 -DROS_PACKAGE_NAME=\"robotcorp\" -Dcommands_EXPORTS
 
-CXX_INCLUDES = -I/home/pi/workspace/opensource_ov/src/robotcorp/cmake-build-debug/devel/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/pi/workspace/opensource_ov/src/robotcorp/receiver/include -I/home/pi/workspace/opensource_ov/src/robotcorp/receiver/src -I/home/pi/workspace/opensource_ov/src/robotcorp/robot/include -I/home/pi/workspace/opensource_ov/src/robotcorp/robot/src -I/home/pi/workspace/opensource_ov/src/robotcorp/sender/include -I/home/pi/workspace/opensource_ov/src/robotcorp/sender/src -I/home/pi/workspace/opensource_ov/src/robotcorp/../../devel/include/robotcorp
+CXX_INCLUDES = -I/home/pi/workspace/opensource_ov/src/robotcorp/cmake-build-debug/devel/include -I/opt/ros/noetic/include -I/opt/ros/noetic/share/xmlrpcpp/cmake/../../../include/xmlrpcpp -I/home/pi/workspace/opensource_ov/src/robotcorp/receiver/include -I/home/pi/workspace/opensource_ov/src/robotcorp/receiver/src -I/home/pi/workspace/opensource_ov/src/robotcorp/robot/include -I/home/pi/workspace/opensource_ov/src/robotcorp/robot/src -I/home/pi/workspace/opensource_ov/src/robotcorp/sender/include -I/home/pi/workspace/opensource_ov/src/robotcorp/sender/src -I/home/pi/workspace/opensource_ov/src/robotcorp/../../devel/include/robotcorp -isystem /home/pi/workspace/opensource_ov/src/robotcorp/thirdparty/json-3.11.2/include
 
 CXX_FLAGS = -g -fPIC
 

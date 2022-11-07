@@ -12,4 +12,4 @@ export LD_LIBRARY_PATH="/home/pi/workspace/opensource_ov/src/robotcorp/cmake-bui
 export PKG_CONFIG_PATH="/home/pi/workspace/opensource_ov/src/robotcorp/cmake-build-debug/devel/lib/pkgconfig:$PKG_CONFIG_PATH"
 export PYTHONPATH="/home/pi/workspace/opensource_ov/src/robotcorp/cmake-build-debug/devel/lib/python3/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/home/pi/workspace/opensource_ov/src/robotcorp/cmake-build-debug/devel/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/pi/workspace/opensource_ov/src/robotcorp:/home/pi/workspace/opensource_ov/src/beginner_tutorials:$ROS_PACKAGE_PATH"
+export ROS_PACKAGE_PATH="/home/pi/workspace/opensource_ov/src/robotcorp:$ROS_PACKAGE_PATH"

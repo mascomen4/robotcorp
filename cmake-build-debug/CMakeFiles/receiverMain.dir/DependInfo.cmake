@@ -31,6 +31,7 @@ set(CMAKE_CXX_TARGET_INCLUDE_PATH
   "../sender/include"
   "../sender/src"
   "../../../devel/include/robotcorp"
+  "../thirdparty/json-3.11.2/include"
   )
 
 # The set of dependency files which are needed:
