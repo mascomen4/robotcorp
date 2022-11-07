@@ -7,3 +7,10 @@ Commands have a duration and a speed
 Instructions comprise a list of 10 commands.
 
 - A Manager component: sends out instructions (for the sake of the assignment, have it send out instructions at the start)
+
+1. install [mqtt_client](https://github.com/ika-rwth-aachen/mqtt_client) to your ros directory
+2. copy file from `launch/params.yaml` to `launch/params.yaml` of the mqtt_client repository.
+3. run docker mqtt: ```docker run --rm --network host --name mosquitto eclipse-mosquitto``` and then ``` roslaunch mqtt_client standalone.launch ```
+2. `rosrun robotcorp robotMain`
+3. `rosrun robotcorp receiverMain`
+4. `rosrun robotcorp senderMain`
