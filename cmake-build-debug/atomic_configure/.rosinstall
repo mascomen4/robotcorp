@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /home/pi/workspace/opensource_ov/src/robotcorp/cmake-build-debug/devel/setup.sh

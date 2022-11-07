@@ -1,0 +1,8 @@
+prefix=/home/pi/workspace/opensource_ov/src/robotcorp/cmake-build-debug/devel
+
+Name: robotcorp
+Description: Description of robotcorp
+Version: 0.0.0
+Cflags: -I/home/pi/workspace/opensource_ov/src/robotcorp/cmake-build-debug/devel/include
+Libs: -L${prefix}/lib 
+Requires: message_runtime mqtt_client nav_msgs roscpp rospy std_msgs
