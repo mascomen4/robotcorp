@@ -22,13 +22,14 @@ int main(int argc, char **argv){
     sender.connect();
 
     // Fill the commands from the json and send them as ROS string message. 
-    std::string fn = "/home/pi/workspace/opensource_ov/src/robotcorp/commands/commands.json";
+    std::string fn = "src/robotcorp/commands/commands.json";
     if (argc == 2) {
         fn = std::string(argv[1]);
     };
     std::ifstream f(fn);
     json data;
     if (f) data = json::parse(f);
+    else {std::cout << "no file! exiting..." << std::endl; return 1;}
     std::vector<std_msgs::StringPtr> commands{};
     for (auto it = data.begin(); it != data.end(); ++it){
         std::cout << it->dump() << std::endl;
