@@ -1,4 +1,4 @@
-# A 3 part system:
+# A Three Part System:
 
 - A Robot component: receives directions in MQTT, translates them into commands and executes them by printing to the console. (forward, backward, left, right, jump, stop)
 Commands have a duration and a speed
@@ -32,9 +32,9 @@ then in terminal `3`
 ```
 wait for ~5 seconds and then stop `Ctrl+Z`. 
 ```
-  rosrun robotcorp robotMain # in terminal 3
-  rosrun robotcorp receiverMain # in terminal 4  
-  rosrun robotcorp senderMain # in terminal 5 
+  rosrun robotcorp robotMain   # in terminal 3
+  rosrun robotcorp receiverMain   # in terminal 4  
+  rosrun robotcorp senderMain   # in terminal 5 
 ```
 
 If the messages are not being published try to relaunch mosquitto and mqtt_client. If it doesn't help try to restart your computer.
