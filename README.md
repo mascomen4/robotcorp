@@ -9,6 +9,16 @@ Instructions comprise a list of 10 commands.
 - A Manager component: sends out instructions (for the sake of the assignment, have it send out instructions at the start)
 
 ## Installation
+install [mqtt_client](https://github.com/ika-rwth-aachen/mqtt_client) to your ros directory (e.g. `catkin_ws/src`):  
+```
+  cd catkin_ws/src
+  git clone https://github.com/ika-rwth-aachen/mqtt_client
+  cd ../
+  catkin build mqtt_client
+```
+
+change file from `launch/params.yaml` in this repo to `launch/params.yaml` of the mqtt_client repository (e.g. `catkin_ws/src/mqtt_client/launch/params.yaml`)
+
 ```
   mkdir build && cd build  
   cmake .. 
@@ -16,8 +26,6 @@ Instructions comprise a list of 10 commands.
 ```  
 
 ## Running
-install [mqtt_client](https://github.com/ika-rwth-aachen/mqtt_client) to your ros directory  
-copy file from `launch/params.yaml` to `launch/params.yaml` of the mqtt_client repository.  
 run docker mosquitto in terminal `1`:  
 ```
   docker run --rm --network host --name mosquitto eclipse-mosquitto
