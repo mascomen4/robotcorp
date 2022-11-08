@@ -30,9 +30,11 @@ then in terminal `3`
 ```
   rostopic pub -r 1 mqtt  robotcorp/command "{}"
 ```
-wait for ~5 seconds and then stop `Ctrl+Z`.    
-in terminal `3` `rosrun robotcorp robotMain`  
-in terminal `4` `rosrun robotcorp receiverMain`  
-in terminal `5` `rosrun robotcorp senderMain`  
+wait for ~5 seconds and then stop `Ctrl+Z`. 
+```
+  rosrun robotcorp robotMain # in terminal 3
+  rosrun robotcorp receiverMain # in terminal 4  
+  rosrun robotcorp senderMain # in terminal 5 
+```
 
 If the messages are not being published try to relaunch mosquitto and mqtt_client. If it doesn't help try to restart your computer.
