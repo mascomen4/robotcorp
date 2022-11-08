@@ -16,12 +16,23 @@ Instructions comprise a list of 10 commands.
 ```  
 
 ## Running
-1. install [mqtt_client](https://github.com/ika-rwth-aachen/mqtt_client) to your ros directory
-2. copy file from `launch/params.yaml` to `launch/params.yaml` of the mqtt_client repository.
-3. run docker mosquitto in terminal `1`: ```docker run --rm --network host --name mosquitto eclipse-mosquitto``` and then in terminal `2` ``` roslaunch mqtt_client standalone.launch ```
-3.1 then in terminal `3` `rostopic pub -r 1 mqtt  robotcorp/command "{}"`, wait for ~5 seconds and then stop.
-4. in terminal `3` `rosrun robotcorp robotMain`
-5. in terminal `4` `rosrun robotcorp receiverMain`
-6. in terminal `5` `rosrun robotcorp senderMain`
+install [mqtt_client](https://github.com/ika-rwth-aachen/mqtt_client) to your ros directory  
+copy file from `launch/params.yaml` to `launch/params.yaml` of the mqtt_client repository.  
+run docker mosquitto in terminal `1`:  
+```
+  docker run --rm --network host --name mosquitto eclipse-mosquitto
+``` 
+and then in terminal `2` 
+ ``` 
+  roslaunch mqtt_client standalone.launch 
+```
+then in terminal `3` 
+```
+  rostopic pub -r 1 mqtt  robotcorp/command "{}"
+```
+wait for ~5 seconds and then stop `Ctrl+Z`.    
+in terminal `3` `rosrun robotcorp robotMain`  
+in terminal `4` `rosrun robotcorp receiverMain`  
+in terminal `5` `rosrun robotcorp senderMain`  
 
 If the messages are not being published try to relaunch mosquitto and mqtt_client. If it doesn't help try to restart your computer.
