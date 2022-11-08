@@ -11,6 +11,8 @@ Instructions comprise a list of 10 commands.
 ## Class structure
 ![diagram](docs/robotcorp.png "Inheritance diagram")
 
+Some sources use templates. 
+
 ## Installation
 install [mqtt_client](https://github.com/ika-rwth-aachen/mqtt_client) to your ros directory (e.g. `catkin_ws/src`):  
 ```
