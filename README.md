@@ -8,6 +8,9 @@ Instructions comprise a list of 10 commands.
 
 - A Manager component: sends out instructions (for the sake of the assignment, have it send out instructions at the start)
 
+## Class structure
+![diagram](docs/robotcorp.png "Inheritance diagram")
+
 ## Installation
 install [mqtt_client](https://github.com/ika-rwth-aachen/mqtt_client) to your ros directory (e.g. `catkin_ws/src`):  
 ```
