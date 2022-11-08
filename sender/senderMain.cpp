@@ -30,14 +30,15 @@ int main(int argc, char **argv){
     json data;
     if (f) data = json::parse(f);
     std::vector<std_msgs::StringPtr> commands{};
-    for (auto & it : data){
-        std_msgs::StringPtr tmp{};
-        tmp->data = it.dump();
+    for (auto it = data.begin(); it != data.end(); ++it){
+        std::cout << it->dump() << std::endl;
+        std_msgs::StringPtr tmp = boost::make_shared<std_msgs::String>();
+        tmp->data = it->dump();
         commands.push_back(tmp);
     }
 
-    for (int i = 0; i < 10; ++i){
-        sender.send(*commands[i]);
+    for (const auto& command : commands){
+        sender.send(*command);
         std::cout << "command sent! sleeping for 1 second..." << std::endl;
         std::this_thread::sleep_for(std::chrono::milliseconds(1000));
     }

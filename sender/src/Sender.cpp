@@ -9,6 +9,9 @@ void senderROS<T>::send(T & msg) {
     pub.publish(msg);
 }
 
+template void senderROS<std_msgs::String>::send(std_msgs::String & msg);
+template void senderROS<robotcorp::command>::send(robotcorp::command & msg);
+
 template<typename T>
 void senderROS<T>::connect() {
     pub = n->advertise<T>(topic, queue_size);

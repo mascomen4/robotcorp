@@ -29,18 +29,21 @@ int main(int argc, char **argv){
         while (true){
             auto msg = receiver.receive();
             if (!msg) {
-//                std::cout << "no commands, sleeping for 1 second..." << std::endl;
+                std::cout << "no commands, sleeping for 1 second..." << std::endl;
                 std::this_thread::sleep_for(std::chrono::milliseconds(1000));
                 continue;
             }
-            auto data = json::parse(msg->data);
+            std::cout << "extracted msg is: " << msg  << std::endl;
+            std::cout << "data is: " << msg->data << std::endl;
+            json data = json::parse(msg->data);
             if (*data.begin() == 0){
                 break;
             }
-            robotcorp::commandPtr command = robotcorp::commandPtr();
-            command->direction = std::stoi(data.begin()->dump());
-            command->speed = std::stoi( (data.begin()+1)->dump());
-            command->duration = std::stoi( (data.begin()+2)->dump());
+            robotcorp::commandPtr command = boost::make_shared<robotcorp::command>();
+            auto it = data.begin();
+            command->direction = std::stoi(it->dump());
+            command->speed = std::stoi((++it)->dump());
+            command->duration = std::stoi((++it)->dump());
             sender.send(*command);
             std::cout << "message sent! sleeping for 1 second..." << std::endl;
         }

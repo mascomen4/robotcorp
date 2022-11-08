@@ -11,15 +11,11 @@
 #include "Receiver.h"
 #include "MsgToCommandConverter.h"
 
-template <typename T>
 class RobotManager {
-    std::shared_ptr<Receiver<T>> recv;
+    std::shared_ptr<Receiver<robotcorp::commandPtr>> recv;
 public:
-    explicit RobotManager(std::shared_ptr<Receiver<T>> receiver) : recv(std::move(receiver)){};
+    explicit RobotManager(std::shared_ptr<Receiver<robotcorp::commandPtr>> receiver) : recv(std::move(receiver)){};
     void manage();
 };
-
-//template class RobotManager<std_msgs::String>;
-template class RobotManager<robotcorp::commandPtr>;
 
 #endif //ROBOTCORP_ROBOTMANAGER_H

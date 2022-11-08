@@ -12,7 +12,7 @@ int main(int argc, char **argv){
     auto nh = std::make_shared<ros::NodeHandle>();
     std::string topic = "/mqtt_recv";
     auto recvBase = std::make_shared<receiverROS<robotcorp::commandPtr>>(nh, topic, 10);
-    RobotManager<robotcorp::commandPtr> manager(recvBase);
+    RobotManager manager(recvBase);
     manager.manage();
     ros::spin();
 }
