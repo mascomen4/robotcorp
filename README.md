@@ -9,9 +9,11 @@ Instructions comprise a list of 10 commands.
 - A Manager component: sends out instructions (for the sake of the assignment, have it send out instructions at the start)
 
 ## Installation
-```mkdir build && cd build```   
-```cmake ..```  
-```make -j```  
+```
+  mkdir build && cd build  
+  cmake .. 
+  make -j
+```  
 
 ## Running
 1. install [mqtt_client](https://github.com/ika-rwth-aachen/mqtt_client) to your ros directory
