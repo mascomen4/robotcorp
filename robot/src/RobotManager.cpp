@@ -6,7 +6,8 @@
 #include <chrono>
 #include <thread>
 
-void RobotManager::manage() {
+template<typename T>
+void RobotManager<T>::manage() {
     recv->connect();
 
     std::thread t1([&](){

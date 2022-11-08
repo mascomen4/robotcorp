@@ -4,11 +4,17 @@
 
 #include "../include/Sender.h"
 
-void senderROS::send(robotcorp::commandPtr & msg) {
-    pub.publish(*msg);
+template <typename T>
+void senderROS<T>::send(T & msg) {
+    pub.publish(msg);
 }
 
-void senderROS::connect() {
-    pub = n->advertise<robotcorp::command>(topic, queue_size);
+template<typename T>
+void senderROS<T>::connect() {
+    pub = n->advertise<T>(topic, queue_size);
     std::cout << "publisher is set to topic: " << topic << std::endl;
 }
+
+template void senderROS<std_msgs::String>::connect();
+template void senderROS<robotcorp::command>::connect();
+//template void senderROS<robotcorp::command>::connect();
