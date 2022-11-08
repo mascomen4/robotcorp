@@ -1,5 +1,6 @@
-# A Three Part System:
+# A Server to Robot Commands Handler
 
+## A Three Part System
 - A Robot component: receives directions in MQTT, translates them into commands and executes them by printing to the console. (forward, backward, left, right, jump, stop)
 Commands have a duration and a speed
 
