@@ -46,7 +46,7 @@ Build robotcorp:
 ## Running
 run docker mosquitto in terminal `1`:  
 ```
-  docker run --rm --network host --name mosquitto eclipse-mosquitto
+  sudo docker run --rm --network host --name mosquitto eclipse-mosquitto
 ``` 
 and then in terminal `2` 
  ``` 
