@@ -15,6 +15,14 @@ Instructions comprise a list of 10 commands.
 Some sources use templates. 
 
 ## Installation
+build nhlohmann_json:
+```
+  cd catkin_ws/src/robotcorp/thirdparty/json-3.11.2
+  mkdir build && cd build
+  cmake ..
+  make -j
+```
+
 install [mqtt_client](https://github.com/ika-rwth-aachen/mqtt_client) to your ros directory (e.g. `catkin_ws/src`):  
 ```
   cd catkin_ws/src
