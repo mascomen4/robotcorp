@@ -50,16 +50,23 @@ run docker mosquitto in terminal `1`:
 ``` 
 and then in terminal `2` 
  ``` 
+  source devel/setup.bash
   roslaunch mqtt_client standalone.launch 
 ```
 then in terminal `3` 
 ```
+  source devel/setup.bash
   rostopic pub -r 1 mqtt  robotcorp/command "{}"
 ```
 wait for ~5 seconds and then stop `Ctrl+C`. 
 ```
+  source devel/setup.bash   # in terminal 3
   rosrun robotcorp robotMain   # in terminal 3
+  
+  source devel/setup.bash   # in terminal 4
   rosrun robotcorp receiverMain   # in terminal 4  
+  
+  source devel/setup.bash   # in terminal 5
   rosrun robotcorp senderMain   # in terminal 5 
 ```
 
