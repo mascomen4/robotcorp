@@ -13,7 +13,7 @@ enum Directions {stop = 0, right = 1, forward = 2, left = 3, backward = 4};
 class MsgToCommandConverter{
 public:
      static std::shared_ptr<Command> convert(const robotcorp::commandPtr& msg){
-         auto res = std::make_shared<Command>();
+         std::shared_ptr<Command> res;
          switch (msg->direction) {
              case Directions::stop:
                  res = std::make_shared<Stop>();

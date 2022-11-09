@@ -10,7 +10,7 @@ class Command {
 public:
     Command(int speed, int duration) : speed(speed), duration(duration){};
     Command() = default;
-    virtual int execute() {return 0;};
+    virtual int execute() = 0;
     int speed{}, duration{};
 };
 

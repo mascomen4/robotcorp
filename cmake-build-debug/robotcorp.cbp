@@ -1404,9 +1404,6 @@
 		<Unit filename="/home/pi/workspace/opensource_ov/src/robotcorp/receiver/recvMain.cpp">
 			<Option target="receiverMain"/>
 		</Unit>
-		<Unit filename="/home/pi/workspace/opensource_ov/src/robotcorp/receiver/src/Receiver.cpp">
-			<Option target="receiver"/>
-		</Unit>
 		<Unit filename="/home/pi/workspace/opensource_ov/src/robotcorp/robot/include/Command.h">
 			<Option target="commands"/>
 		</Unit>
@@ -1422,17 +1419,11 @@
 		<Unit filename="/home/pi/workspace/opensource_ov/src/robotcorp/robot/src/Command.cpp">
 			<Option target="commands"/>
 		</Unit>
-		<Unit filename="/home/pi/workspace/opensource_ov/src/robotcorp/robot/src/RobotManager.cpp">
-			<Option target="robotMain"/>
-		</Unit>
 		<Unit filename="/home/pi/workspace/opensource_ov/src/robotcorp/sender/include/Sender.h">
 			<Option target="sender"/>
 		</Unit>
 		<Unit filename="/home/pi/workspace/opensource_ov/src/robotcorp/sender/senderMain.cpp">
 			<Option target="senderMain"/>
-		</Unit>
-		<Unit filename="/home/pi/workspace/opensource_ov/src/robotcorp/sender/src/Sender.cpp">
-			<Option target="sender"/>
 		</Unit>
 		<Unit filename="/usr/src/googletest/googlemock/src/gmock-all.cc">
 			<Option target="gmock"/>

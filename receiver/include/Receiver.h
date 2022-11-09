@@ -16,8 +16,8 @@ class Receiver{
 public:
     Receiver() = default;
     virtual ~Receiver() = default;
-    virtual void connect() {};
-    virtual T receive() {return T{};};
+    virtual void connect() = 0;
+    virtual T receive() = 0;
 };
 
 template <typename T>
@@ -33,11 +33,25 @@ public:
     ~receiverROS() override = default;
 
     std::queue<T> q;
-    void connect() override;
-    T receive() override;
-//    void msgCallback(const robotcorp::commandPtr &msg);
-    void msgCallback(const T &);
-//    void msgCallback(const std_msgs::StringPtr &msg);
+    void connect() override{
+        sub = n->subscribe( topic, queue_size, &receiverROS<T>::msgCallback, this);
+        ROS_INFO_STREAM("subscriber is set to topic: " << topic << std::endl);
+    };
+
+    T receive() override {
+        if (!q.empty()){
+            auto msg = q.front();
+            q.pop();
+            return msg;
+        }
+        else{
+            return nullptr;
+        }
+    };
+
+    void msgCallback(const T & msg){
+        q.push(msg);
+    };
 
 };
 
@@ -48,8 +62,5 @@ public:
     void connect() override {};
     T receive() override {return nullptr;};
 };
-
-template class receiverROS<std_msgs::StringPtr>;
-template class receiverROS<robotcorp::commandPtr>;
 
 #endif //ROBOTCORP_RECEIVER_H

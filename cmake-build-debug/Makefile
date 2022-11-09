@@ -1196,30 +1196,6 @@ receiver/recvMain.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/receiverMain.dir/build.make CMakeFiles/receiverMain.dir/receiver/recvMain.cpp.s
 .PHONY : receiver/recvMain.cpp.s
 
-receiver/src/Receiver.o: receiver/src/Receiver.cpp.o
-.PHONY : receiver/src/Receiver.o
-
-# target to build an object file
-receiver/src/Receiver.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/receiver.dir/build.make CMakeFiles/receiver.dir/receiver/src/Receiver.cpp.o
-.PHONY : receiver/src/Receiver.cpp.o
-
-receiver/src/Receiver.i: receiver/src/Receiver.cpp.i
-.PHONY : receiver/src/Receiver.i
-
-# target to preprocess a source file
-receiver/src/Receiver.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/receiver.dir/build.make CMakeFiles/receiver.dir/receiver/src/Receiver.cpp.i
-.PHONY : receiver/src/Receiver.cpp.i
-
-receiver/src/Receiver.s: receiver/src/Receiver.cpp.s
-.PHONY : receiver/src/Receiver.s
-
-# target to generate assembly for a file
-receiver/src/Receiver.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/receiver.dir/build.make CMakeFiles/receiver.dir/receiver/src/Receiver.cpp.s
-.PHONY : receiver/src/Receiver.cpp.s
-
 robot/robotMain.o: robot/robotMain.cpp.o
 .PHONY : robot/robotMain.o
 
@@ -1268,30 +1244,6 @@ robot/src/Command.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/commands.dir/build.make CMakeFiles/commands.dir/robot/src/Command.cpp.s
 .PHONY : robot/src/Command.cpp.s
 
-robot/src/RobotManager.o: robot/src/RobotManager.cpp.o
-.PHONY : robot/src/RobotManager.o
-
-# target to build an object file
-robot/src/RobotManager.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/robotMain.dir/build.make CMakeFiles/robotMain.dir/robot/src/RobotManager.cpp.o
-.PHONY : robot/src/RobotManager.cpp.o
-
-robot/src/RobotManager.i: robot/src/RobotManager.cpp.i
-.PHONY : robot/src/RobotManager.i
-
-# target to preprocess a source file
-robot/src/RobotManager.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/robotMain.dir/build.make CMakeFiles/robotMain.dir/robot/src/RobotManager.cpp.i
-.PHONY : robot/src/RobotManager.cpp.i
-
-robot/src/RobotManager.s: robot/src/RobotManager.cpp.s
-.PHONY : robot/src/RobotManager.s
-
-# target to generate assembly for a file
-robot/src/RobotManager.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/robotMain.dir/build.make CMakeFiles/robotMain.dir/robot/src/RobotManager.cpp.s
-.PHONY : robot/src/RobotManager.cpp.s
-
 sender/senderMain.o: sender/senderMain.cpp.o
 .PHONY : sender/senderMain.o
 
@@ -1315,30 +1267,6 @@ sender/senderMain.s: sender/senderMain.cpp.s
 sender/senderMain.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/senderMain.dir/build.make CMakeFiles/senderMain.dir/sender/senderMain.cpp.s
 .PHONY : sender/senderMain.cpp.s
-
-sender/src/Sender.o: sender/src/Sender.cpp.o
-.PHONY : sender/src/Sender.o
-
-# target to build an object file
-sender/src/Sender.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sender.dir/build.make CMakeFiles/sender.dir/sender/src/Sender.cpp.o
-.PHONY : sender/src/Sender.cpp.o
-
-sender/src/Sender.i: sender/src/Sender.cpp.i
-.PHONY : sender/src/Sender.i
-
-# target to preprocess a source file
-sender/src/Sender.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sender.dir/build.make CMakeFiles/sender.dir/sender/src/Sender.cpp.i
-.PHONY : sender/src/Sender.cpp.i
-
-sender/src/Sender.s: sender/src/Sender.cpp.s
-.PHONY : sender/src/Sender.s
-
-# target to generate assembly for a file
-sender/src/Sender.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/sender.dir/build.make CMakeFiles/sender.dir/sender/src/Sender.cpp.s
-.PHONY : sender/src/Sender.cpp.s
 
 # Help Target
 help:
@@ -1433,24 +1361,15 @@ help:
 	@echo "... receiver/recvMain.o"
 	@echo "... receiver/recvMain.i"
 	@echo "... receiver/recvMain.s"
-	@echo "... receiver/src/Receiver.o"
-	@echo "... receiver/src/Receiver.i"
-	@echo "... receiver/src/Receiver.s"
 	@echo "... robot/robotMain.o"
 	@echo "... robot/robotMain.i"
 	@echo "... robot/robotMain.s"
 	@echo "... robot/src/Command.o"
 	@echo "... robot/src/Command.i"
 	@echo "... robot/src/Command.s"
-	@echo "... robot/src/RobotManager.o"
-	@echo "... robot/src/RobotManager.i"
-	@echo "... robot/src/RobotManager.s"
 	@echo "... sender/senderMain.o"
 	@echo "... sender/senderMain.i"
 	@echo "... sender/senderMain.s"
-	@echo "... sender/src/Sender.o"
-	@echo "... sender/src/Sender.i"
-	@echo "... sender/src/Sender.s"
 .PHONY : help
 
 

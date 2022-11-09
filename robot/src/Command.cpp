@@ -7,30 +7,41 @@
 #include <thread>
 #include <chrono>
 
+void print_move(const std::string & direction, int duration, int speed){
+    std::cout << "[ROBOT]: " << "\033[1;32m" << "moving" << direction << "for " << duration << " seconds with speed "
+        << speed << " ..." << "\033[0m\n" << std::endl;
+}
+
+void print_stop(){
+    std::cout << "[ROBOT]: " << "\033[1;31m" << "STOP" << "\033[0m\n" << std::endl;
+}
+
+
 int Left::execute() {
-    std::cout << "moving left for " << duration << " seconds with speed " << speed << " ..." << std::endl;
+    print_move("left", duration, speed);
     std::this_thread::sleep_for(std::chrono::seconds(duration));
     return 0;
 }
 
 int Right::execute() {
-    std::cout << "moving right for " << duration << " seconds with speed " << speed << " ..." << std::endl;
+    print_move("right", duration, speed);
     std::this_thread::sleep_for(std::chrono::seconds(duration));
     return 0;
 }
 
 int Forward::execute() {
-    std::cout << "moving forward for " << duration << " seconds with speed " << speed << " ..." << std::endl;
+    print_move("forward", duration, speed);
     std::this_thread::sleep_for(std::chrono::seconds(duration));
     return 0;
 }
 
 int Backward::execute() {
-    std::cout << "moving backwards for " << duration << " seconds with speed " << speed << " ..." << std::endl;
+    print_move("backward", duration, speed);
     std::this_thread::sleep_for(std::chrono::seconds(duration));
     return 0;
 }
 
 int Stop::execute() {
+    print_stop();
     return 1;
 }

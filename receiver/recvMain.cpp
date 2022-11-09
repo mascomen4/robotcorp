@@ -37,7 +37,7 @@ int main(int argc, char **argv){
             command->speed = std::stoi((++it)->dump());
             command->duration = std::stoi((++it)->dump());
             sender.send(*command);
-            std::cout << "message sent! sleeping for 1 second..." << std::endl;
+            ROS_INFO_STREAM("message sent! sleeping for 1 second...");
         }
         std::cout << "exiting..." << std::endl;
     });

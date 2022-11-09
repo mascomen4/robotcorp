@@ -225,11 +225,13 @@ add_library(commands robot/include/Command.h robot/src/Command.cpp)
 target_link_libraries(commands ${catkin_LIBRARIES} nlohmann_json::nlohmann_json)
 add_dependencies(commands ${catkin_EXPORTED_TARGETS})
 
-add_library(sender sender/include/Sender.h sender/src/Sender.cpp)
+add_library(sender sender/include/Sender.h)
+set_target_properties(sender PROPERTIES LINKER_LANGUAGE CXX)
 target_link_libraries(sender ${catkin_LIBRARIES} nlohmann_json::nlohmann_json)
 add_dependencies(sender ${catkin_EXPORTED_TARGETS})
 
-add_library(receiver receiver/include/Receiver.h receiver/src/Receiver.cpp)
+add_library(receiver receiver/include/Receiver.h)
+set_target_properties(receiver PROPERTIES LINKER_LANGUAGE CXX)
 target_link_libraries(receiver ${catkin_LIBRARIES} sender)
 add_dependencies(receiver ${catkin_EXPORTED_TARGETS} sender)
 
@@ -237,9 +239,8 @@ add_executable(senderMain sender/senderMain.cpp)
 target_link_libraries(senderMain sender)
 
 add_executable(receiverMain receiver/recvMain.cpp)
-target_link_libraries(receiverMain receiver sender)
+target_link_libraries(receiverMain receiver)
 
-add_executable(robotMain robot/include/RobotManager.h robot/src/RobotManager.cpp
-        robot/include/MsgToCommandConverter.h robot/robotMain.cpp)
+add_executable(robotMain robot/include/RobotManager.h robot/include/MsgToCommandConverter.h robot/robotMain.cpp)
 add_dependencies(robotMain ${catkin_EXPORTED_TARGETS})
-target_link_libraries(robotMain ${catkin_LIBRARIES} sender receiver commands)
+target_link_libraries(robotMain ${catkin_LIBRARIES} receiver commands)
