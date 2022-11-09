@@ -44,7 +44,7 @@ then in terminal `3`
 ```
   rostopic pub -r 1 mqtt  robotcorp/command "{}"
 ```
-wait for ~5 seconds and then stop `Ctrl+Z`. 
+wait for ~5 seconds and then stop `Ctrl+C`. 
 ```
   rosrun robotcorp robotMain   # in terminal 3
   rosrun robotcorp receiverMain   # in terminal 4  
