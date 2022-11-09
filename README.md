@@ -34,9 +34,13 @@ install [mqtt_client](https://github.com/ika-rwth-aachen/mqtt_client) to your ro
 change file from `launch/params.yaml` in this repo to `launch/params.yaml` of the mqtt_client repository (e.g. `catkin_ws/src/mqtt_client/launch/params.yaml`)
 
 ```
-  mkdir build && cd build  
-  cmake .. 
-  make -j
+  cp src/robotcorp/launch/params.yaml src/mqtt_client/launch/params.yaml
+```
+
+Install robotcorp:
+```
+  cd catkin_ws/
+  catkin build robotcorp
 ```  
 
 ## Running
