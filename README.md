@@ -37,7 +37,7 @@ change file from `launch/params.yaml` in this repo to `launch/params.yaml` of th
   cp src/robotcorp/launch/params.yaml src/mqtt_client/launch/params.yaml
 ```
 
-Install robotcorp:
+Build robotcorp:
 ```
   cd catkin_ws/
   catkin build robotcorp
