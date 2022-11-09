@@ -124,6 +124,7 @@ catkin_package(
 include_directories(
 # include
   ${catkin_INCLUDE_DIRS}
+  	include/
         receiver/include/
         receiver/src/
         robot/include/
