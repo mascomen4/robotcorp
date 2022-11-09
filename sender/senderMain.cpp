@@ -11,10 +11,7 @@
 
 using json = nlohmann::json;
 
-//enum Directions {stop = 0, right = 1, forward = 2, left = 3, backward = 4};
-
 int main(int argc, char **argv){
-//    std::cout << 0 << std::endl;
     ros::init(argc, argv, "sender");
     auto nh = std::make_shared<ros::NodeHandle>();
     std::string topic = "json";

@@ -20,4 +20,3 @@ void senderROS<T>::connect() {
 
 template void senderROS<std_msgs::String>::connect();
 template void senderROS<robotcorp::command>::connect();
-//template void senderROS<robotcorp::command>::connect();
